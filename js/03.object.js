@@ -20,7 +20,7 @@ function aa() {
 	console.log(bb);
 }
 aa();
-console.log(bb) // 에러남 못찾음
+// console.log(bb) // 에러남 못찾음
 
 // IIFE(즉시실행함수)
 (function () {
@@ -72,4 +72,46 @@ console.log(a); // function() {}
 a();
 
 // 그래서 변수가 객체(Object)가 될 수 있다.
+// Human
+console.log("========");
+var hong = {
+	name: '홍길동',
+	age: 20,
+	weight: 80,
+	height: 180,
+	run: function () {
+		console.log(this.name + '이 뜁니다.');
+	}
+}
+var hong2 = {
+	name: '홍길순',
+	age: 20,
+	weight: 80,
+	height: 180,
+	run: function () {
+		console.log(this.name + '이 뜁니다.');
+	}
+}
+console.log(hong.name);
+console.log(hong.age);
+console.log(hong.weight);
+console.log(hong.height);
+human.run();
 
+console.log(hong);
+console.log(console);
+
+var korea = {
+	human: hong
+
+}
+
+var earth = {
+	country: korea
+}
+
+var universe = {
+	star : earth
+}
+
+console.log(universe);
