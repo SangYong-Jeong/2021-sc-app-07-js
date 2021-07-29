@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bulb</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<style>
+	</style>
+	<script src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container p-1 my-3 border rounded text-center">
+		<img src="../img/off.png" alt="off" id="bulb">		
+	</div>
+	<div class="container p-1 my-3 border rounded text-center" id="bt-wrap">
+		<button class="btn btn-primary" id="ON" onclick="changeBulb('ON');">ON</button>
+		<button class="btn btn-danger" id="OFF" style="display: none;" onclick="changeBulb('OFF');">OFF</button>
+	</div>
+	<div class="container p-1 my-3 border rounded text-center">
+		<img src="../img/off.png" alt="bulb" id="off" onclick="changeBulb2('OFF');">
+		<img src="../img/on.png" alt="bulb" id="on" style="display: none;" onclick="changeBulb2('ON');">
+	</div>
+	<script src="../js/07.bulb.js"></script>
+</body>
+</html>
