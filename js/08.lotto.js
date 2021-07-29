@@ -6,6 +6,7 @@ Array
 - arr.unshift('값') : 배열의 맨 앞에 값을 넣는다. 
 - arr.pop(): 배열의 맨 뒤의 값을 뽑아낸다(배열이 변한다.)
 - arr.shift(): 배열의 맨 앞의 값을 뽑아낸다(배열이 변한다.)
+- arr.splice(idx, 빼고싶은 갯수, 넣을 값): 배열의 중간에 값을 넣거나 빼거나 교체한다.
 */
 
 // console.log( Math.abs(-1) );        // 절대값
@@ -27,22 +28,40 @@ Array
 // console.log( random(1, 45) );
 
 var arr = ['A', 'B'];
-console.log(arr);                         // ['A', 'B']
+console.log(arr);                                      // ['A', 'B']
 
-console.log(arr.push('C'));               // 3 (배열의 갯수를 리턴)             
-console.log(arr);                         // ['A', 'B', 'C']
+console.log(arr.push('C'));                            // 3 (배열의 갯수를 리턴)             
+console.log(arr);                                      // ['A', 'B', 'C']
 
-console.log(arr.unshift('Z'));            // 4 (배열의 갯수를 리턴)  
-console.log(arr);                         // ['Z', 'A', 'B', 'C']
-
+console.log(arr.unshift('Z'));                         // 4 (배열의 갯수를 리턴)  
+console.log(arr);                                      // ['Z', 'A', 'B', 'C']
 
 var a = arr[2];
-console.log(arr[2]);                      // B (값을 가져올 뿐 방에서 값이 나오진 않는다.) 
-console.log(arr);                         // ['Z', 'A', 'B', 'C']
+console.log(arr[2]);                                   // B (값을 가져올 뿐 방에서 값이 나오진 않는다.) 
+console.log(arr);                                      // ['Z', 'A', 'B', 'C']
 
-console.log( arr.pop() );                 // C
-console.log( arr );                       // ['Z', 'A', 'B']
+console.log( arr.pop() );                              // C
+console.log( arr );                                    // ['Z', 'A', 'B']
 
-console.log( arr.shift() );               // Z
-console.log( arr );                       // ['A', 'B']
+console.log( arr.shift() );                            // Z
+console.log( arr );                                    // ['A', 'B']
 
+var fruits = ['apple', 'banana', 'cherry'];
+// 값을 넣기만 함
+console.log( fruits.splice(1, 0, 'melon') );           //  [] (꺼내는 값들을 새로운 배열에 넣어서 리턴한다.)
+console.log(fruits);                                   //  ['apple', 'melon' 'banana', 'cherry']
+
+var fruits = ['apple', 'banana', 'cherry'];
+// 값을 빼기만 함
+console.log( fruits.splice(1, 1) );                    //  ['banana'] (꺼내는 값들을 새로운 배열에 넣어서 리턴한다.)
+console.log(fruits);                                   //  ['apple', 'cherry']
+
+var fruits = ['apple', 'banana', 'cherry'];
+// 값을 교체 함
+console.log( fruits.splice(1, 1, 'melon', 'orange') ); //  ['banana'] (꺼내는 값들을 새로운 배열에 넣어서 리턴한다.)
+console.log(fruits);                                   //  ['apple', 'melon', 'orange', 'cherry']
+
+var fruits = ['apple', 'banana', 'cherry'];
+// 값을 교체 함
+console.log( fruits.splice(1, 2, 'melon', 'orange') ); //  ['banana', 'cherry'] (꺼내는 값들을 새로운 배열에 넣어서 리턴한다.)
+console.log(fruits);                                   //  ['apple', 'melon', 'orange']
