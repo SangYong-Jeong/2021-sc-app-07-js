@@ -1,0 +1,52 @@
+<script>
+// BOM - Browser Object Model
+// DOM - Document Object Model
+
+/* 
+변수의 타입(primitive(원시) type) - number, string, boolean, undefined
+변수의 타입(reference(참조) type) - array, object, null
+배열(Array)
+반복(Iteration) - for, while
+*/
+// 홍길동은 180cm 입니다.
+// 홍길순은 185cm 입니다.
+// 홍길만은 175cm 입니다.
+var students = [
+	{
+		name: '홍길동',
+		age: 28,
+		height: 180
+	}, {
+		name: '홍길순',
+		age: 25,
+		height: 185
+	}, {
+		name: '홍길만',
+		age: 32,
+		height: 175
+	}
+];
+console.log(students[0].name +'은 '+ students[0].height + 'cm' + ' 입니다.');
+console.log(students[1].name +'은 '+ students[1].height + 'cm' + ' 입니다.');
+console.log(students[2].name +'은 '+ students[2].height + 'cm' + ' 입니다.');
+
+/*
+// 반복문은 '조건'이 ture일 동안 반복, '조건'이 false가 되면 반복 종료
+for (초기값; 조건; 증가값) {
+	// qksqhrgkf sodyd
+}
+*/
+var sum = 0;
+for (var i = 1; i<=10; i=i+1) {
+	console.log(i);
+	sum += i
+}
+console.log(i); // 11
+console.log(sum); // 55
+
+// i = i + 1 --> i++, ++i
+var j = 10;
+console.log(j++); // 10
+console.log(++j); // 11
+
+</script>
