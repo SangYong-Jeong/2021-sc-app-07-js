@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Box생성</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<style>
+		.box {width: 80px; height: 80px; margin: 16px; background-color: red;}
+	</style>
+</head>
+<body>
+	<div class="container p-3 text-center">
+		<button class="btn btn-primary mr-1" onclick="createBox();">만들어</button>
+		<button class="btn btn-danger" onclick="removeBox();">지워</button>
+	</div>
+	<div class="container border p-3 my-1 d-flex flex-wrap" id="stage">
+	</div>
+	<script src="../js/06.box.js"></script>
+</body>
+</html>
