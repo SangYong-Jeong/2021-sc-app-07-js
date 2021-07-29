@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+	<div class="container p-5">
+		<div class="mx-auto mb-3" style="width: 150px;">
+			<img src="../img/off.png" alt="bulb" class="w100" id="bulb">
+		</div>
+		<div class="text-center">
+			<button class="btn btn-danger" onclick="toggleBulb(true);" id="btOn">ON</button>
+			<button class="btn btn-dark" style="display: none;" onclick="toggleBulb(false);" id="btOff">OFF</button>
+		</div>
+	</div>
+	<div class="container p-5">
+		<div class="mx-auto" style="width: 150px;">
+			<img src="../img/off.png" alt="bulb" class="w100" id="off" onclick="toggleBulb2(true);">
+			<img src="../img/on.png" alt="bulb" class="w100" id="on" style="display: none;" onclick="toggleBulb2(false);">
+		</div>
+	</div>
+	<script src="../js/07.bulb2.js"></script>
+</body>
+</html>
