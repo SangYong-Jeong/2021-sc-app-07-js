@@ -96,7 +96,7 @@ console.log(hong.name);
 console.log(hong.age);
 console.log(hong.weight);
 console.log(hong.height);
-human.run();
+hong.run();
 
 console.log(hong);
 console.log(console);
@@ -115,3 +115,4 @@ var universe = {
 }
 
 console.log(universe);
+console.log(window); // window가 javascript에서 최상위 객체
