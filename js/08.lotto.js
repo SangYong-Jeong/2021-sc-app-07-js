@@ -88,7 +88,17 @@ function choiceLotto() {
 		if( lotto.indexOf(numbers[idx]) === -1 ) lotto.push(numbers[idx]);
 	} // while(조건) { 조건이 참일때까지 반복, 반복회수 제한이 애매할때 }
 	lottoEl.innerHTML = '';
-	for(var i=0; i<6; i++) {
-		lottoEl.innerHTML += '<li>'+lotto[i]+'</li>';
+	for(var i=0; i<6; i++) {		
+		lottoEl.innerHTML += '<li class="'+getLottoColor(lotto[i])+'">'+lotto[i]+'</li>';
 	}
+}
+
+function getLottoColor(n) {
+	var color = '';
+	if (n <= 10) color = 'yellow'
+	else if (n <= 20) color = 'blue'
+	else if (n <= 30) color = 'red'
+	else if (n <= 40) color = 'black'
+	else color = 'green'
+	return color;
 }
