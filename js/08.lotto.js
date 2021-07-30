@@ -81,7 +81,6 @@ console.clear();
 function choiceLotto() {
 	var numbers = [];
 	var lotto = new Array();
-	var lottoEl = document.getElementById('lotto');
 	
 	for(var i=1; i<=45; i++) numbers.push(i);
 	// for(; lotto.length < 6;) {
@@ -91,6 +90,15 @@ function choiceLotto() {
 		if( lotto.indexOf(numbers[idx]) === -1 ) lotto.push(numbers[idx]);
 	} // while(조건) { 조건이 참일때까지 반복, 반복회수 제한이 애매할때 }
 	lotto.sort(function(a, b) {return a - b}); // 오름차순 정렬
+	setHtml(lotto);
+}
+
+function setHtml(lotto) {
+	var lottoEl = document.getElementById('lotto');
+	var historyEl = document.getElementById('history');
+	var html = lottoEl.innerHTML;
+
+	historyEl.innerHTML = '<li><ul class="d-flex my-2 justify-content-center">'+html+'</ul></li>' + historyEl.innerHTML;
 	lottoEl.innerHTML = '';
 	for(var i=0, color=''; i<6; i++) {		
 		lottoEl.innerHTML += '<li class="ball '+getLottoColor(lotto[i])+'">'+lotto[i]+'</li>';
