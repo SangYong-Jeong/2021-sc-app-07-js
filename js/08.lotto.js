@@ -8,6 +8,9 @@ Array
 - arr.shift(): 배열의 맨 앞의 값을 뽑아낸다(배열이 변한다.)
 - arr.splice(idx, 빼고싶은 갯수, 넣을 값): 배열의 중간에 값을 넣거나 빼거나 교체한다.
 - arr.indexOf(값): 값이 위치한 index값을 리턴한다. 만약 값이 없으면 -1을 리턴한다.
+- arr.sort(): 배열의 값을 정렬한다.
+- 1. 오름차순 arr.sort(function(a, b) {return a - b}) (암기)
+- 2. 내림차순 arr.sort(function(a, b) {return b - a}) (암기)
 */
 
 // console.log( Math.abs(-1) );        // 절대값
@@ -87,9 +90,10 @@ function choiceLotto() {
 		var idx = random(0, 45);
 		if( lotto.indexOf(numbers[idx]) === -1 ) lotto.push(numbers[idx]);
 	} // while(조건) { 조건이 참일때까지 반복, 반복회수 제한이 애매할때 }
+	lotto.sort(function(a, b) {return a - b}); // 오름차순 정렬
 	lottoEl.innerHTML = '';
-	for(var i=0; i<6; i++) {		
-		lottoEl.innerHTML += '<li class="'+getLottoColor(lotto[i])+'">'+lotto[i]+'</li>';
+	for(var i=0, color=''; i<6; i++) {		
+		lottoEl.innerHTML += '<li class="ball '+getLottoColor(lotto[i])+'">'+lotto[i]+'</li>';
 	}
 }
 

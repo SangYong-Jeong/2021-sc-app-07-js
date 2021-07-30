@@ -1,9 +1,9 @@
+.yellow {background-color: #64660a;}
+.blue {background-color: #08265c;}
+.red {background-color: #8b2c0f;}
+.black {background-color: #686866;}
+.green {background-color: #054620;}
+.ball {width: 36px; height: 36px; margin: 2px; color: #fff; border-radius: 50%; line-height: 35px; text-align: center; font-weight: bold;}
+
 #lotto {width: 250px; height: 50px; display: flex; padding: 5px;}
-#lotto > li {width: 36px; height: 36px; margin: 2px; background-color: #41072f;
-color: #fff; border-radius: 50%; line-height: 35px; text-align: center;
-font-weight: bold;}
-#lotto > li.yellow {background-color: #64660a;}
-#lotto > li.blue {background-color: #08265c;}
-#lotto > li.red {background-color: #8b2c0f;}
-#lotto > li.black {background-color: #686866;}
-#lotto > li.green {background-color: #054620;}
+#history {width: 500px; padding: 5px;}
